@@ -1,0 +1,273 @@
+/* Fondo general para toda la página */
+body {
+    background-image: url('../images/fondo1.jpg');
+    background-size: cover;
+    background-position: center 10%; /* Ajusta el porcentaje verticalmente */
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    color: rgb(255, 255, 255);
+    margin: 0;
+    padding: 0;
+    min-height: 100vh; /* Asegúrate de que el fondo cubra toda la altura de la ventana */
+}
+
+/* Fondo específico para el formulario de inicio de sesión */
+#login-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 25vh;
+    background-size: cover;
+    background-position: center;
+    animation: slideIn 0.6s ease-out;
+}
+
+/* Fondo para el contenido principal (sin fondo específico, usa el del body) */
+#content-section {
+    display: none; /* Cambiado de none a block */
+    padding: 50px;
+    min-height: calc(100vh - 100px); /* Asegúrate de que tenga suficiente altura */
+    overflow: auto
+}
+
+/* Estilo del header */
+header {
+    background-color: #380c37; /* Color revisado */
+    color: rgb(255, 255, 255);
+    text-align: center;
+    padding: 20px 0;
+}
+
+/* Estilo de los títulos */
+h1, h2 {
+    margin: 0;
+    font-size: 2.5em;
+}
+
+/* Estilo de las secciones */
+section {
+    padding: 20px;
+    margin: 20px auto;
+    max-width: 800px;
+    background-color: rgba(72, 24, 71, 0.7); /* Color revisado con transparencia */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden; /* Evita que el contenido sobresalga */
+}
+
+/* Estilo del h2 */
+h2 {
+    border-bottom: 2px solid #481847; /* Color revisado */
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+}
+
+/* Estilo del contenedor del carrusel */
+.carousel-container {
+    position: relative;
+    max-width: 500px;
+    margin: auto;
+    overflow: hidden;
+}
+
+/* Estilo del carrusel */
+.carousel-inner {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    transition: transform 0.5s ease;
+}
+
+.carousel-item {
+    min-width: 100%;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.carousel-item img, .carousel-item video {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+}
+
+/* Estilo de los botones del carrusel */
+.carousel-button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(40, 0, 39, 0.7); /* Color revisado con transparencia */
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.carousel-button.prev {
+    left: 0;
+}
+
+.carousel-button.next {
+    right: 0;
+}
+
+/* Estilo del contenido de la carta */
+#letter-content {
+    white-space: pre-line;
+    line-height: 1.6;
+    display: none;
+    background: rgb(89, 37, 87); /* Color revisado */
+    border: 2px solid #481847; /* Color revisado */
+    padding: 20px;
+    margin-top: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 30px;
+    transition: opacity 0.6s ease-in-out, transform 0.6s ease-in-out;
+    opacity: 0;
+    transform: translateY(-20px);
+}
+
+#letter-content.show {
+    display: block;
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Estilo del contador */
+#countdown {
+    font-size: 1.5em;
+    font-weight: bold;
+    text-align: center;
+    background-color: #693167; /* Color revisado */
+    color: white;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+/* Estilo del contenedor de inicio de sesión */
+.login-container {
+    text-align: center;
+    background: rgba(255, 255, 255, 0.8);
+    border: 2px solid #592557; /* Color revisado */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Estilo de los campos de texto del formulario de inicio de sesión */
+#login-section input[type="text"],
+#login-section input[type="password"] {
+    padding: 8px;
+    border: 1px solid #cbe0f6;
+    border-radius: 5px;
+    width: 80%;
+    box-sizing: border-box;
+    margin-bottom: 10px;
+}
+
+/* Estilo del botón de inicio de sesión */
+#login-section button {
+    background-color: #380c37; /* Color revisado */
+    color: white;
+    border: none;
+    padding: 8px 20px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+#login-section button:hover {
+    background-color: #d8a8e2;
+}
+
+/* Estilo del sobre */
+#envelope {
+    position: relative;
+    width: 300px;
+    height: 200px;
+    margin: 20px auto;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+#envelope:hover {
+    transform: scale(1.05);
+}
+
+.envelope-icon {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+/* Estilo del botón de cierre de sesión */
+#logout-button {
+    background-color: #280027; /* Color revisado */
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 5px;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+#logout-button:hover {
+    background-color: #9e63a3e6; /* Color revisado */
+    transform: scale(1.05);
+}
+
+/* Animación */
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Estilo de la sección de la canción */
+#song {
+    padding: 20px;
+    margin: 20px auto;
+    max-width: 800px;
+    background-color: rgba(72, 24, 71, 0.7); /* Color revisado con transparencia */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+}
+
+#song h2 {
+    margin: 0;
+    font-size: 2em;
+    color: rgb(255, 255, 255); /* Cambiado a blanco */
+    text-align: center;
+}
+
+#song audio {
+    width: 100%;
+    margin: 20px 0;
+}
+
+#song-lyrics {
+    background-color: rgb(89, 37, 87); /* Color revisado */
+    padding: 10px;
+    border-radius: 5px;
+    color: white; /* Cambiado a blanco para el texto general */
+}
+
+#song-lyrics h3 {
+    margin: 0;
+    font-size: 1.5em;
+    color: #380c37; /* Violeta muy oscuro para el título */
+}
+
+#song-lyrics p {
+    margin: 0;
+    line-height: 1.6;
+}

@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Para mi amor</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <header>
+        <h1>Para Mi Vida muack</h1>
+    </header>
+
+    <section id="login-section">
+        <h2>Iniciar Sesión</h2>
+        <div class="login-container">
+            <input type="text" id="username" placeholder="Nombre de usuario" onkeydown="checkEnter(event)">
+            <input type="password" id="password" placeholder="Introduce la contraseña" onkeydown="checkEnter(event)">
+            <button onclick="login()">Entrar</button>
+            <p id="error-message" style="color: red;"></p>
+        </div>
+    </section>
+
+    <section id="content-section">
+        <button id="logout-button" onclick="logout()">Cerrar Sesión</button>
+        <section id="photos">
+            <h2>Nuestros Momentos</h2>
+            <div class="carousel-container">
+                <button class="carousel-button prev" onclick="changeSlide(-1)">&#10094;</button>
+                <div class="carousel-inner">
+                    <div class="carousel-item">
+                        <img src="C:\Users\Satana\Documents\Proyecto web\Proyectito\Fotos\foto1.jfif" alt="foto 1">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="C:\Users\Satana\Documents\Proyecto web\Proyectito\Fotos\foto2.jfif" alt="foto 2">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="C:\Users\Satana\Documents\Proyecto web\Proyectito\Fotos\foto3.jfif" alt="foto 3">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="C:\Users\Satana\Documents\Proyecto web\Proyectito\Fotos\foto4.jfif" alt="foto 4">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="C:\Users\Satana\Documents\Proyecto web\Proyectito\Fotos\foto5.jfif" alt="foto 5">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="C:\Users\Satana\Documents\Proyecto web\Proyectito\Fotos\foto6.jfif" alt="foto 6">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="C:\Users\Satana\Documents\Proyecto web\Proyectito\Fotos\foto7.jfif" alt="foto 7">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="C:\Users\Satana\Documents\Proyecto web\Proyectito\Fotos\foto8.jfif" alt="foto 8">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="C:\Users\Satana\Documents\Proyecto web\Proyectito\Fotos\foto9.jfif" alt="foto 9">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="C:\Users\Satana\Documents\Proyecto web\Proyectito\Fotos\foto10.jfif" alt="foto 10">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="C:\Users\Satana\Documents\Proyecto web\Proyectito\Fotos\foto11.jfif" alt="foto 11">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="C:\Users\Satana\Documents\Proyecto web\Proyectito\Fotos\foto12.jfif" alt="foto 12">
+                    </div>
+                    <div class="carousel-item">
+                        <video controls>
+                            <source src="C:\Users\Satana\Documents\Proyecto web\Proyectito\video.mp4" type="video/mp4">
+                        </video>
+                    </div>
+                    <div class="carousel-item">
+                        <video controls>
+                            <source src="C:\Users\Satana\Documents\Proyecto web\Proyectito\Fotos\video2.mp4" type="video/mp4">
+                        </video>
+                    </div>
+                </div>
+                <button class="carousel-button next" onclick="changeSlide(1)">&#10095;</button>
+            </div>
+        </section>
+        <section id="song">
+            <h2>Canción Especial</h2>
+            <audio controls>
+                <source src="C:\Users\Satana\Documents\Proyecto web\Proyectito\song\Billie Eilish - hostage.mp3" type="audio/mp3">
+                Tu navegador no soporta el elemento de audio.
+            </audio>
+            <div id="song-lyrics">
+                <h3>Hostage</h3>
+                <p>
+                    I wanna be alone Alone with you, does that make sense? I wanna steal your soul And hide you in my treasure chest I don't know what to do To do with your kiss on my neck I don't know what feels true But this feels right so stay a sec Yeah, you feel right so stay a sec And let me crawl inside your veins I'll build a wall, give you a ball and chain It's not like me to be so mean You're all I wanted Just let me hold you like a hostage Gold on your fingertips Fingertips against my cheek Gold leaf across your lips Kiss me until I can't speak Gold chain beneath your shirt The shirt that you let me wear home Gold's fake and real love hurts And nothing hurts when I'm alone When you're with me and we're alone And let me crawl inside your veins I'll build a wall, give you a ball and chain It's not like me to be so mean You're all I wanted Just let me hold you Hold you like a hostage Like a hostage
+
+                </p>
+            </div>
+        </section>
+        <section id="letter">
+            <h2>Una Carta para voce</h2>
+            <div id="envelope">
+                <img id="closed-envelope" src="../Proyectito/images/cerrada.gif" alt="Carta" class="envelope-icon">
+                <img id="opening-envelope" src="../Proyectito/images/abierta.gif" alt="Carta abriendo" class="envelope-icon" style="display: none;">
+                
+            </div>
+            <div id="letter-content" class="letter">
+                Para mi niña bella:
+
+        <p>Espero que te guste el detalle que te hice, pero mis ganas de querer terminarlo para que lo vieras me hacían estar horas sentada en el escritorio creando esto para voce, demostrarte que te amo muchísimo y quiero siempre lo mejor para ti. Sé que no has tenido muy buenos días últimamente, al hacer esto lo quería para distraerte y que te olvidaras de tu entorno junto a lo que te atormenta aunque sea por tan solo 1 minuto. Pero ese minuto vale totalmente el esfuerzo que le puse para verte feliz. Jael, yo quiero que sepas que pase lo que pase estaré junto a ti, apoyándote, dándote aliento y ahí estaré en primera fila para verte triunfar. La vida tiene altos y bajos, pero el pico igual, iaa te pusiste ordinaria ale xdio, como decía, la vida tiene altos y bajos; sin embargo, debemos rescatar el aprendizaje que vamos adquiriendo. Lo importante no es el destino de llegada, sino el camino que recorremos. Eiaaa la filosófica. Bueno, y eso, mi niña, ahora te dedico un poema:</p>
+
+        <p>Quiero que seamos inmarcesibles,<br> 
+        Nuestros corazones jamás rendirse,<br>
+        Una epifanía perfecta,<br>
+        Es aceptar que seremos eternas.</p>
+
+        <p>Cada vez que te veo, la noche se hace día,<br>  
+        Y la tristeza se transforma en alegría,<br>
+        En tus ojos encuentro mi aurora,<br> 
+        Un susurro que mi alma atesora.</p>
+
+        <p>Tu amor es el fuego que arde sin fin,<br>
+        Un lazo eterno que me une a ti.<br>
+        Que en cada latido encuentre sazón,<br>
+        Y en cada mirada, eterna pasión.</p>
+
+        <p>Que bonitos ojos tienes quiero chuparte yiaaa INAAAAAA.</p>
+            </div>
+            
+            
+        </section>
+               
+        <section id="anniversary">
+            <h2>LLevo la cuenta de cada segundo, minuto, hora, dia, año junto a ti <3</h2>
+            <div id="countdown">
+                <!-- Aquí se mostrará el contador -->
+            </div>
+        </section>
+    </section>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
