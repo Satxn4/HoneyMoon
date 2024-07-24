@@ -28,8 +28,8 @@ function login() {
     const username = document.getElementById('username').value;
     const password = document.getElementById('password').value;
     const errorMessage = document.getElementById('error-message');
-    const correctUsername = '1'; // Nombre de usuario correcto
-    const correctPassword = '1'; // Contraseña correcta
+    const correctUsername = 'Jael'; // Nombre de usuario correcto
+    const correctPassword = '2208'; // Contraseña correcta
 
     if (username === correctUsername && password === correctPassword) {
         document.getElementById('login-section').style.display = 'none';
